@@ -51,7 +51,7 @@ namespace HeroSim
             position += distance;
             if (position > 29)
             {
-                power += 40;
+                power += 50;
                 position -= 30;
             }
 
