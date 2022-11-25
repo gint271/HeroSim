@@ -60,7 +60,7 @@ namespace HeroSim
             if (power > 100)
             {
                 destructionCount += 1;
-                power -= 100;
+                power = 0; // Don't believe power overflows to the next level, need to verify myself.
             }
         }
     }
