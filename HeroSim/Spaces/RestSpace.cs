@@ -10,6 +10,7 @@ namespace HeroSim.Spaces
         {
             state.power += 5;
             state.consecutiveTraining = 0;
+            state.earnedItems[(int)Item.ManufacturerCommonConsole] += 1;
         }
     }
 }

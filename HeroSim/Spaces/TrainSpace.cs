@@ -19,6 +19,7 @@ namespace HeroSim.Spaces
                     break;
             }
             state.consecutiveTraining += 1;
+            state.earnedItems[(int)Item.ManufacturerCommonConsole] += 1;
         }
     }
 }

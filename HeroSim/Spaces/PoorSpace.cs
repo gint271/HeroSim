@@ -12,6 +12,7 @@ namespace HeroSim.Spaces
             // Assumption that it can't go below zero.
             state.power = state.power < 0 ? 0 : state.power;
             state.consecutiveTraining = 0;
+            state.earnedItems[(int)Item.HourResourceBox] += 1;
         }
     }
 }

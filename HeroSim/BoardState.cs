@@ -54,7 +54,7 @@ namespace HeroSim
             power = 0;
             consecutiveTraining = 0;
             destructionCount = 0;
-            earnedItems = new int[7];
+            earnedItems = new int[5];
         }
 
         public void move(int distance)
@@ -80,9 +80,7 @@ namespace HeroSim
         SupportCommonConsole,
         DefendersCommonConsole,
         AttackersCommonConsole,
-        ElysionCommonConsole,
-        MissilisCommonConsole,
-        TetraCommonConsole,
-        PilgrimCommonConsole,
+        ManufacturerCommonConsole,
+        HourResourceBox
     }
 }

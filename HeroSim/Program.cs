@@ -24,7 +24,8 @@ namespace HeroSim
                     state.move(distance);
                 }
 
-                log.AppendLine($"{state.destructionCount}\t{state.earnedItems[(int)Item.SupportCommonConsole]}\t{state.earnedItems[(int)Item.DefendersCommonConsole]}\t{state.earnedItems[(int)Item.AttackersCommonConsole]}");
+                log.AppendLine($"{state.destructionCount}\t{state.earnedItems[(int)Item.SupportCommonConsole]}\t{state.earnedItems[(int)Item.DefendersCommonConsole]}\t{state.earnedItems[(int)Item.AttackersCommonConsole]}" +
+                    $"\t{state.earnedItems[(int)Item.ManufacturerCommonConsole]}\t{state.earnedItems[(int)Item.HourResourceBox]}");
             }
 
             using (StreamWriter writer = new StreamWriter("./outfile.txt"))
