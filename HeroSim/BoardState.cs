@@ -13,6 +13,7 @@ namespace HeroSim
         public int consecutiveTraining;
         public int destructionCount;
         public int[] earnedItems;
+        public int[] spaceLandingCounts;
 
         public static Space[] board = new Space[30] {
             new MoveSpace(3),
@@ -55,6 +56,7 @@ namespace HeroSim
             consecutiveTraining = 0;
             destructionCount = 0;
             earnedItems = new int[6];
+            spaceLandingCounts = new int[30];
         }
 
         public void move(int distance)
@@ -68,6 +70,7 @@ namespace HeroSim
 
             checkPower();
 
+            this.spaceLandingCounts[position] += 1;
             board[position].Land(this);
 
             checkPower();
