@@ -8,14 +8,14 @@ namespace HeroSim.Spaces
     {
         public override void Land(BoardState state)
         {
-            //TODO: Consecutive bonus.
-            switch (state.consecutiveTraining)
+            // Streak bonus resets after 3.
+            switch (state.consecutiveTraining % 3)
             {
                 case 0: state.power += 5;
                     break;
                 case 1: state.power += 10;
                     break;
-                default: state.power += 20; // Assumes power gain stays at 20 for streaks above 3.
+                case 2: state.power += 20; 
                     break;
             }
             state.consecutiveTraining += 1;
