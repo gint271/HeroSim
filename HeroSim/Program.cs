@@ -25,7 +25,7 @@ namespace HeroSim
                 }
 
                 log.AppendLine($"{state.destructionCount}\t{state.earnedItems[(int)Item.SupportCommonConsole]}\t{state.earnedItems[(int)Item.DefendersCommonConsole]}\t{state.earnedItems[(int)Item.AttackersCommonConsole]}" +
-                    $"\t{state.earnedItems[(int)Item.ManufacturerCommonConsole]}\t{state.earnedItems[(int)Item.HourResourceBox]}");
+                    $"\t{state.earnedItems[(int)Item.ManufacturerCommonConsole]}\t{state.earnedItems[(int)Item.HourResourceBox]}\t{state.earnedItems[(int)Item.REEnergy]}");
             }
 
             using (StreamWriter writer = new StreamWriter("./outfile.txt"))

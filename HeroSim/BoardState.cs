@@ -54,7 +54,7 @@ namespace HeroSim
             power = 0;
             consecutiveTraining = 0;
             destructionCount = 0;
-            earnedItems = new int[5];
+            earnedItems = new int[6];
         }
 
         public void move(int distance)
@@ -88,6 +88,7 @@ namespace HeroSim
         DefendersCommonConsole,
         AttackersCommonConsole,
         ManufacturerCommonConsole,
-        HourResourceBox
+        HourResourceBox,
+        REEnergy
     }
 }

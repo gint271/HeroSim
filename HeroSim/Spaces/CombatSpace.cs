@@ -15,6 +15,7 @@ namespace HeroSim.Spaces
             else
                 state.power += 10;
             state.consecutiveTraining = 0;
+            state.earnedItems[(int)Item.REEnergy] += 1;
         }
     }
 }
