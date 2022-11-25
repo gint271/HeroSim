@@ -66,13 +66,14 @@ namespace HeroSim
                 position -= 30;
             }
 
-            board[position].Land(this);
-
             if (power > 100)
             {
                 destructionCount += 1;
                 power = 0;
             }
+
+            board[position].Land(this);
+
         }
     }
 
