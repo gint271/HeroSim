@@ -1,5 +1,7 @@
 ﻿using HeroSim.Spaces;
 using System;
+using System.IO;
+using System.Text;
 
 namespace HeroSim
 {
@@ -7,27 +9,27 @@ namespace HeroSim
     {
         static void Main(string[] args)
         {
-            int totalRolls = 0;
-            int maxRolls = int.MinValue;
-            int minRolls = int.MaxValue;
+            StringBuilder log = new StringBuilder();
             for (int i = 0; i < 10000; i++)
             {
                 var state = new BoardState();
                 var dice = new Random();
 
             
-
-                while (state.destructionCount < 10)
+                // FTP should be around 251 rolls
+                for (int j = 0; j < 251; j++)
                 {
                     state.rollCount += 1;
                     int distance = dice.Next(1, 7);
                     state.move(distance);
                 }
 
-                totalRolls += state.rollCount;
-                maxRolls = state.rollCount > maxRolls ? state.rollCount : maxRolls;
-                minRolls = state.rollCount < minRolls ? state.rollCount : minRolls;
-                Console.WriteLine($"{state.rollCount}");
+                log.AppendLine($"{state.destructionCount}\t{state.earnedItems[(int)Item.SupportCommonConsole]}\t{state.earnedItems[(int)Item.DefendersCommonConsole]}\t{state.earnedItems[(int)Item.AttackersCommonConsole]}");
+            }
+
+            using (StreamWriter writer = new StreamWriter("./outfile.txt"))
+            {
+                writer.Write(log.ToString());
             }
         }
     }
